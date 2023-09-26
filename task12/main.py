@@ -12,6 +12,7 @@ while True:
     if selected_db == '1':
         if operation == '13':
             print("logging out ....")
+            log_out(connection_for_psql())
             selected_db = db_selection()
         elif operation == "1":
             create_database(connection_for_mysql())
@@ -47,12 +48,11 @@ while True:
         elif operation == '12':
             db = input("pleaase enter database name in which table is exist: ")
             drop_table(connection_for_mysql(db))
-        elif operation == '13':
-            log_out(connection_for_mysql())
 
     if selected_db == '2':
         if operation == '13':
             print("logging out ....")
+            log_out(connection_for_psql())
             selected_db = db_selection()
         elif operation == "1":
             create_database(connection_for_psql())
@@ -88,5 +88,3 @@ while True:
         elif operation == '12':
             db = input("pleaase enter database name in which table is exist: ")
             drop_table(connection_for_psql(db))
-        elif operation == '13':
-            log_out(connection_for_psql())

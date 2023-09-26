@@ -3,9 +3,13 @@ from connection import *
 
 def db_selection():
     print("\n1. mysql \n"
-        "2. postfres \n"
+        "2. postgres \n"
         "3. exit \n")
     selected_db = input("please select database: ")
+    if selected_db == "1":
+        print("using mysql")
+    elif selected_db == "2":
+        print("using postgres")
     return selected_db
 
 # menu
